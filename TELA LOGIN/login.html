@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+    <title>Login BirdBox</title>
+    <link rel="shortcut icon" type="image/png" href="../Imagens/Logo.png"/>
+</head>
+<body>
+    <!----------------------------------Nav Bar Box----------------------------------------->
+
+    <nav class="nav-box">
+        <div class="logo-birdbox">
+            <a href="../HOME/home.html"><img src="../Imagens/Logo.png" alt="Logo"></a>
+        </div>
+        <div class="nav-service-box">
+            <div class="service-box">
+                <a href="../HOME/home.html">Home</a>
+            </div>
+            <div class="service-box">
+                <a href="#" >Sobre</a>
+            </div>
+            <div class="service-box">
+                <a href="#">Serviços</a>
+            </div>
+            <div class="sign-up-in">
+                <div class="service-box login-register">
+                    <a href="#" onclick="mostrarCadastro()">Sign up</a>
+                </div>
+                <div class="service-box login-register">
+                    <a href="#" onclick="mostrarLogin()">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!----------------------------------Login Box----------------------------------------->
+    <div class="container active" id="login-container">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Bem-vindo</h1>
+                <p>Faça o login</p>
+            </div>
+            <form class="form-box">
+                <div class="input-group">
+                    <input type="email" id="email-login" class="input-field" placeholder="" required>
+                    <label for="email" class="floating-label">Endereço de Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password-login" class="input-field" placeholder="" required>
+                    <label for="password" class="floating-label">Senha</label>
+                    <div class="eye-icon" onclick="togglePassword()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-icon lucide-eye"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                </div>
+                <div class="input-group checkbox-group">
+                    <div class="form-col remember-me">
+                        <input type="checkbox" id="remember-me-checkbox" class="checkbox-field">
+                        <label for="remember-me-checkbox">Lembrar do cadastro</label>
+                    </div>
+                    <div class="form-col">
+                        <a href="#" class="form-link">Esqueceu a senha?</a>
+                    </div>
+                </div>
+                <button type="submit" class="form-btn form-btn--submit" onclick="validarLogin()">Entrar</button>
+            </form>
+            <div class="form-cadastrar-se">
+                <p>Ainda não possui uma conta? <a href="#" onclick="mostrarCadastro()">Cadastrar-se</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------Register Box----------------------------------------->
+    <div class="container-cadastro" id="cadastro-container">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Bem-vindo</h1>
+                <p>Faça seu cadastro</p>
+            </div>
+            <form class="form-box">
+                <div class="input-group">
+                    <input type="text" id="user" class="input-field" placeholder="" required>
+                    <label for="user" class="floating-label">Usuário</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email-cadastro" class="input-field" placeholder="" required>
+                    <label for="user" class="floating-label">email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password-cadastro" class="input-field" placeholder="" required>
+                    <label for="password" class="floating-label">Senha</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirm-password" class="input-field" placeholder="" required>
+                    <label for="password" class="floating-label">Confirme sua senha</label>
+                </div>
+                <button type="submit" class="form-btn form-btn--submit" onclick="validarSenha(); return false">Cadastrar-se</button>
+            </form>
+            <div class="form-cadastrar-se">
+                <p>Já possui uma conta? <a href="#" onclick="mostrarLogin()">Entrar</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

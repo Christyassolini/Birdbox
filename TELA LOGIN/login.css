@@ -1,0 +1,275 @@
+:root {
+    --color-background: #f0f0f0;
+    --color-text: #333;
+    --color-border: #ccc;
+    --color-placeholder: #777;
+    --color-primary: #039703;
+    --color-primary-hover: #035303;
+    --color-link: #1a73e8;
+    --color-divider: #ddd;
+    --color-social-hover: #f0f0f0;
+    --color-floating-label: #5f6268;
+    --color-white: #fff;
+    --background-login: url(../Imagens/walpaper-pagina-login.jpg);
+    --color-navbar: #013301;
+    --color-navbar-hover: #265226;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-background);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: var(--color-text);
+    background: var(--background-login);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-box {
+    display: flex;
+    background: linear-gradient(90deg, #013301,#035303,#013301);
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+.nav-service-box {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    gap: 80px;
+    position: relative;
+}
+
+.sign-up-in {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo-birdbox {
+    margin-left: 50px;
+    align-items: center;
+}
+
+.service-box {
+    color: var(--color-white);
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.service-box:hover {
+    color: var(--color-white);
+    padding: 15px 20px;
+    background-color: var(--color-navbar-hover);
+    border-radius: 10px;
+}
+
+.service-box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.login-register {
+    background-color: var(--color-primary);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    transition: transform 0.3s, background-color 0.3s ease;
+}
+
+.login-register:hover {
+    background-color: var(--color-primary-hover);
+    transform: scale(1.05);
+}
+
+.logo-birdbox img {
+     max-width:120px;
+    max-height:120px;
+    width: auto;
+    height: auto;
+}
+
+.container,
+.container-cadastro {
+    margin-top: 100px;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(50px);
+    transition: opacity 0.3s ease, transform 0.9s ease;
+    padding: 20px;
+    
+}
+
+.container.active,
+.container-cadastro.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0);
+}
+
+.form-container{
+    position: relative;
+    background-color: var(--color-white);
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 8px;
+    border: 1px solid black;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); 
+}
+.form-header {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.form-header p {
+    color: var(--color-placeholder);
+}
+
+.form-header h1 {
+    font-size: 32x;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+}
+
+.input-field {
+    height: 48px;
+    padding-inline: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    width: 100%;
+    outline: none;
+}
+
+#password {
+    padding-right: 40px;
+}
+.floating-label {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    color: var(--color-placeholder);
+    background-color: var(--color-white);
+    padding-inline: 6px;
+    transition: all .3s ease;
+    pointer-events: none;
+}
+
+.input-field:focus ~ .floating-label,
+.input-field:not(:placeholder-shown) ~ .floating-label{
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: var(--color-primary); 
+}
+
+.input-field:focus{
+    border-color: var(--color-primary);
+}
+
+.input-field:not(:focus):not(:placeholder-shown) ~ .floating-label {
+    color: var(--color-floating-label);
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.eye-icon svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: var(--color-placeholder);
+}
+
+.checkbox-group{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 48px;
+    background: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding-inline: 8px;
+}
+
+.form-btn--submit {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.form-btn--submit:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.form-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.form-cadastrar-se {
+    margin-top: 20px;
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+:root {
+    --color-background: #f0f0f0;
+    --color-text: #333;
+    --color-border: #ccc;
+    --color-placeholder: #777;
+    --color-primary: #039703;
+    --color-primary-hover: #035303;
+    --color-link: #1a73e8;
+    --color-divider: #ddd;
+    --color-social-hover: #f0f0f0;
+    --color-floating-label: #5f6268;
+    --color-white: #fff;
+    --background-login: url(../Imagens/walpaper-pagina-login.jpg);
+    --color-navbar: #013301;
+    --color-navbar-hover: #0b440b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: var(--background-login);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
