@@ -22,11 +22,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body {
+html {
     max-width: 100%;
     height: 100%;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -36,8 +36,8 @@ body {
     color: var(--color-text);
     background: var(--background-login);
     background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
+    background-position: center;
+    background-attachment: scroll;
     min-height: 100vh;
     background-size: cover;
 }
@@ -45,23 +45,26 @@ body {
 @media (max-width: 768px) {
 
     .nav-box {
+        flex-direction: column;
         overflow-x: hidden;
         display: flex;
         background: linear-gradient(90deg, #013301,#035303,#013301);
-        height: 100px;
+        height: auto;
         width: 100%;
         justify-content: space-between;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        padding: 10px, 0px;
     }
 
     .nav-service-box {
-        margin-right: 0;
-        padding: 0 10px;
-        gap: 12px;
+        margin: 0;
+        padding: 0 12px;
+        gap: 10px;
         width: 100%;
         box-sizing: border-box;
         display: flex;
         align-items: center;
+        flex-direction: column;
     }
 
     .service-box a {
@@ -73,23 +76,45 @@ body {
         text-decoration: none;
         color: var(--color-white);
     }
+
+    .logo-birdbox {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .sign-up-in {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .service-box {
+        width: 100%;
+    }
+
+    .service-box a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .nav-box {
-    overflow: hidden;
     display: flex;
     background: linear-gradient(90deg, #013301,#035303,#013301);
     height: 100px;
     width: 100%;
     justify-content: space-between;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 100vw;
+    overflow: hidden;
 }
+
 .nav-service-box {
     display: flex;
     align-items: center;
     margin-right: 50px;
     gap: 80px;
-    
 }
 
 .sign-up-in {
@@ -148,16 +173,19 @@ body {
     align-items: center;
     justify-content: center;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transform: translateX(50px);
-    transition: opacity 0.3s ease, transform 0.9s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
     padding: 20px;
-    
+    width: 100%;
+    min-height: calc(100vh - 100px);
 }
 
 .container.active,
 .container-cadastro.active {
     opacity: 1;
+    visibility: visible;
     pointer-events: all;
     transform: translateX(0);
 }
@@ -218,7 +246,7 @@ body {
     color: var(--color-placeholder);
     background-color: var(--color-white);
     padding-inline: 6px;
-    transition: all .3s ease;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
     pointer-events: none;
 }
 
