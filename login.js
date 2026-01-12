@@ -22,14 +22,14 @@ function validarSenha() {
 
   if (confirmarSenha === senha) {
     alert('Successful');
-    location.href = "./TELA DE CATEGORIA/criarCategoria.html";
+    location.href = "./tela-categoria/criarCategoria.html";
   } else {
     alert('Error');
   }
 }
 
 function validarLogin() {
-  location.href = "./TELA DE CATEGORIA/criarCategoria.html"
+  location.href = "./tela-categoria/criarCategoria.html"
 }
 
 function mostrarCadastro() {
