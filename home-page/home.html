@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="home.js"></script>
+    <meta name="color-scheme" content="light only">
     <link rel="stylesheet" href="home.css">
+    <script src="home.js" defer></script>
+    <title>Categoria</title>
     <link rel="shortcut icon" type="image/png" href="../imagens-page/Logo.png"/>
-    <title>Home</title>
 </head>
 <body>
+    <!---------------------------------- Nav Bar Box ----------------------------------------->
+    <nav class="nav-box">
+        <div class="logo-birdbox">
+            <a href="#"><img src="../imagens-page/Logo.png" alt="Logo BirdBox"></a>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-service-box" id="nav-menu">
+            <div class="service-box">
+                <a href="#">Home</a>
+            </div>
+            <div class="service-box">
+                <a href="#">Sobre</a>
+            </div>
+            <div class="service-box">
+                <a href="#">Serviços</a>
+            </div>
+            <div class="sign-up-in">
+                <div class="service-box login-register">
+                    <a href="../index.html">Sign up</a>
+                </div>
+                <div class="service-box login-register">
+                    <a href="../index.html">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 </body>
 </html>

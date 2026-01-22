@@ -42,8 +42,6 @@ body {
     width: 100%;
     overflow-x: hidden;
     color-scheme: light only;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
 }
 
 /* ==================== NAVBAR ==================== */

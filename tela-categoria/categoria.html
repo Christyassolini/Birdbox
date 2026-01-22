@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <link rel="stylesheet" href="categoria.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>  
+    <script src="categoria.js" defer></script>
+    <title>Categoria</title>
+    <link rel="shortcut icon" type="image/png" href="../imagens-page/Logo.png"/>
+</head>
+<body>
+    <!---------------------------------- Nav Bar Box ----------------------------------------->
+    <nav class="nav-box">
+        <div class="logo-birdbox">
+            <a href="#"><img src="../imagens-page/Logo.png" alt="Logo BirdBox"></a>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-service-box" id="nav-menu">
+            <div class="service-box">
+                <a href="#">Home</a>
+            </div>
+            <div class="service-box">
+                <a href="#">Sobre</a>
+            </div>
+            <div class="service-box">
+                <a href="#">Serviços</a>
+            </div>
+        </div>
+    </nav>
+
+    <!---------------------------------- Categoria ----------------------------------------->
+
+    <main class="container">
+        <section class="categoria-container">
+                <header class="title">
+                    <h1>Categorias</h1>
+                    <p>Gerencie suas categorias</p>
+                </header>
+                <div class="categorias-group">
+                    <span class="categoria">
+                        <div class="imagem-categoria">
+                            <img src="../imagens-page/filomena.jpeg" alt="Categoria-Imagem">
+                        </div>
+                        <div class="info-categoria">
+                            <div class="title-categoria">
+                                <h2>Filomena</h2>
+                            </div>
+                            <div class="desc-categoria">
+                                <p>Deusa</p>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="categoria">
+                        <div class="imagem-categoria">
+                            <img src="../imagens-page/mingau.jpeg" alt="Categoria-Imagem">
+                        </div>
+                        <div class="info-categoria">
+                            <div class="title-categoria">
+                                <h2>Mingau</h2>
+                            </div>
+                            <div class="desc-categoria">
+                                <p>Mingaus</p>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="add-categoria">
+                        <div class="add">
+                            <div class="plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+        </section>
+    </main>
+
+</body>
+</html>

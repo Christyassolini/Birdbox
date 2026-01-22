@@ -29,16 +29,25 @@ function togglePassword() {
 /**
  * Valida se as senhas coincidem no cadastro
  */
-function validarSenha() {
+
+function validarCadastro() {
+
     const senha = document.getElementById('password-cadastro').value;
     const confirmarSenha = document.getElementById('confirm-password').value;
+    const nome = document.getElementById("name").value;
+    const emailCadastro = document.getElementById("email-cadastro").value;
 
-    if (confirmarSenha === senha) {
-        alert('Cadastro realizado com sucesso!');
-        location.href = "./tela-categoria/criarCategoria.html";
-    } else {
-        alert('As senhas não coincidem. Tente novamente.');
+    if (emailCadastro === "" || senha === "" || nome === "") {
+        window.alert('Preencha todos os campos!');
+        return;
     }
+        
+    if (confirmarSenha !== senha) {
+        window.alert('As senhas não coincidem!')
+        return;
+    }
+    window.alert('Cadastro realizado com sucesso!');
+    location.href = "../tela-categoria/categoria.html";
 }
 
 /**
@@ -47,11 +56,10 @@ function validarSenha() {
 function validarLogin() {
     const email = document.getElementById('email-login').value;
     const senha = document.getElementById('password-login').value;
-
-    // Validação básica
+    
     if (email && senha) {
         alert('Login realizado com sucesso!');
-        location.href = "./tela-categoria/criarCategoria.html";
+        location.href = "../tela-categoria/categoria.html";
     } else {
         alert('Por favor, preencha todos os campos.');
     }
@@ -72,3 +80,17 @@ function mostrarLogin() {
     cadastroContainer.classList.remove("active");
     loginContainer.classList.add("active");
 }
+
+/* ============== GSAP ============== */
+
+gsap.to("body", {
+    backdropFilter: "blur(5px)",
+    duration: 0.5,
+});
+
+gsap.from(".container", {
+    opacity: 0,
+    scale: 0.95,
+    duration: 0.3,
+    ease: "power1.inOut",
+});
