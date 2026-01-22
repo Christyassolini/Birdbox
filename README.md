@@ -1,6 +1,6 @@
 # 🎯 Visão Geral do Sistema
 
-O sistema de Gerenciamento de Animais tem como objetivo permitir ao usuário cadastrar, organizar e controlar informações relacionadas aos seus animais.
+O "Sistema de Organização e Controle de Animais" tem como objetivo permitir ao usuário cadastrar, organizar e controlar informações relacionadas aos seus animais.
 O usuário poderá registrar dados como nome, raça, data de nascimento, alimentação, vacinas e observações gerais, além de criar categorias personalizadas (como “cachorros”, “pássaros” etc.).
 O sistema também contará com lembretes e controle de estoque, permitindo acompanhar a quantidade de animais de cada raça.
 
